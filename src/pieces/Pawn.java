@@ -10,36 +10,65 @@ package pieces;
  * @author Ignacio
  */
 public class Pawn extends Piece {
-
+    
     private int x, y;
     private boolean black;
-
+    private boolean firstMove;
+    
     public Pawn(int x, int y) {
         super(x, y);
     }
-
+    
     public int getX() {
         return x;
     }
-
+    
     public void setX(int x) {
         this.x = x;
     }
-
+    
     public int getY() {
         return y;
     }
-
+    
     public void setY(int y) {
         this.y = y;
     }
-
+    
     public boolean isBlack() {
         return black;
     }
-
+    
     public void setBlack(boolean black) {
         this.black = black;
     }
-
+    
+    public void move(int x, int y) {
+        if (black) {
+            if (firstMove) {
+                if (this.x + 2 == x) {
+                    this.setX(x);
+                }else if (this.x+1==x) {
+                    this.setX(x);
+                }
+            }else{
+                if (this.x+1==x) {
+                    this.setX(x);
+                }
+            }
+        }else{
+            if (firstMove) {
+                if (this.x - 2 == x) {
+                    this.setX(x);
+                }else if (this.x-1==x) {
+                    this.setX(x);
+                }
+            }else{
+                if (this.x-1==x) {
+                    this.setX(x);
+                }
+            }
+        }
+    }
+    
 }
