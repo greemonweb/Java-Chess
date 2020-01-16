@@ -10,43 +10,17 @@ package pieces;
  * @author Ignacio
  */
 public class Rook extends Piece {
+    private String name;
 
     private static int x, y;
     private boolean black;
 
     public Rook(int x, int y) {
         super(x, y);
+        this.name = "Rook";
     }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        if (x >= 0) {
-            this.x = x;
-        }
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        if (y >= 0) {
-            this.y = y;
-        }
-    }
-
-    public boolean isBlack() {
-        return black;
-    }
-
-    public void setBlack(boolean black) {
-        this.black = black;
-    }
-
-    public void move(int x, int y) {
+    @Override
+    public  void move(int x, int y) {
         if (this.x != x && this.y == y) {
             this.setX(x);
         } else if (this.x == x && this.y != y) {

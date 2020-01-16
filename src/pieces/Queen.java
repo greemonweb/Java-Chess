@@ -10,38 +10,17 @@ package pieces;
  * @author Ignacio
  */
 public class Queen extends Piece {
+    private String name;
 
     private int x, y;
     private boolean black;
 
     public Queen(int x, int y) {
         super(x, y);
+        this.name = "Queen";
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public boolean isBlack() {
-        return black;
-    }
-
-    public void setBlack(boolean black) {
-        this.black = black;
-    }
-
+    @Override
     public void move(int x, int y) {
         if (this.x - x == this.y - y) {
             this.setX(x);
