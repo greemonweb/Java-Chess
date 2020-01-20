@@ -11,7 +11,6 @@ package pieces;
  */
 public class Piece {
 
-    private String name;
     private int x, y;
     private boolean black;
 
@@ -20,13 +19,6 @@ public class Piece {
         this.y = y;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getX() {
         return x;
@@ -54,7 +46,7 @@ public class Piece {
 
     @Override
     public String toString() {
-        return "Piece{ " + "name=" + name + ", x=" + x + ", y=" + y + ", black=" + black + '}';
+        return "Piece{ " + ", x=" + x + ", y=" + y + ", black=" + black + '}';
     }
     public void move(int x, int y) {
         this.x=x;

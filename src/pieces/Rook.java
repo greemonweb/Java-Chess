@@ -10,14 +10,11 @@ package pieces;
  * @author Ignacio
  */
 public class Rook extends Piece {
-    private String name;
-
     private static int x, y;
     private boolean black;
 
     public Rook(int x, int y) {
         super(x, y);
-        this.name = "Rook";
     }
     @Override
     public  void move(int x, int y) {

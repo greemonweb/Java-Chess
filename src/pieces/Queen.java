@@ -10,14 +10,11 @@ package pieces;
  * @author Ignacio
  */
 public class Queen extends Piece {
-    private String name;
-
     private int x, y;
     private boolean black;
 
     public Queen(int x, int y) {
         super(x, y);
-        this.name = "Queen";
     }
 
     @Override

@@ -10,14 +10,11 @@ package pieces;
  * @author Ignacio
  */
 public class Knight extends Piece {
-    private String name;
-
     private int x, y;
     private boolean black;
 
     public Knight(int x, int y) {
         super(x, y);
-        this.name = "Knight";
     }
 
     @Override

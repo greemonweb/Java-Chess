@@ -10,15 +10,12 @@ package pieces;
  * @author Ignacio
  */
 public class Pawn extends Piece {
-    private String name;
-    
     private int x, y;
     private boolean black;
     private boolean firstMove;
     
     public Pawn(int x, int y) {
         super(x, y);
-        this.name = "Pawn";
     }
     
     @Override
