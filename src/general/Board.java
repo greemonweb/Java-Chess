@@ -89,36 +89,8 @@ public class Board {
         King wK = new King(7, 4);
         wK.setBlack(false);
         board[7][4] = wK;
-        ocupiedArray[7][4] = true;
+        ocupiedArray[7][4] = true; 
         
-        exeMove(wK, 2, 3, board, ocupiedArray);
-        exeMove(wK, 7, 3, board, ocupiedArray);
-        
-    }
-    
-    public static void exeMove(Piece p1, int x, int y, Piece[][] p, boolean[][] bOcupied) {
-//        if (!b[x][y] || p[x][y].isBlack() != p1.isBlack()) {
-//            if (!b[x][y]) {
-//                System.out.println("Esto esta vaciooo, moviendo ficha jeje");
-//            } else {
-//                System.out.println("Son de distinto colo! ñam ñam...");
-//            }
-//            b[x][y] = true;
-//            b[p1.getX()][p1.getY()] = false;
-//            p1.move(x, y);
-//        } else {
-//            System.out.println("Está ocupada o son del mismo color :(");
-//            System.out.println(p1);
-//        }
-        if (!bOcupied[x][y]) {
-            bOcupied[x][y]=true;
-            bOcupied[p1.getX()][p1.getY()]=false;
-            p1.move(x, y);
-        }else {
-            if (p1.isBlack()!=p[x][y].isBlack()) {
-                
-            }
-        }
     }
     
 }
